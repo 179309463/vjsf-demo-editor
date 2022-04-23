@@ -54,12 +54,12 @@ function entryFn({ dir, chunks = [] }) {
         // const fileName = path.basename(entry, path.extname(entry));
 
         // 第一个 entry 为浏览器默认打开页面
-        if (index === 0) openPage = `${entryName}.html`;
+        if (index === 0) openPage = '';
 
         preValue[entryName] = {
             entry,
             template: fs.existsSync(entry.replace('.js', '.html')) ? entry.replace('.js', '.html') : defaultTemp,
-            filename: `${entryName}.html`,
+            filename: 'index.html',
             title: `${entryName} - Test Demo`,
             chunks: [
                 entryName,
