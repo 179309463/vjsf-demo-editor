@@ -9,8 +9,7 @@ Vue.use(VueRouter);
  *
  */
 export default new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? '/micro-frontend/vjsf-demo-editor/' : '/',
-    mode: 'history',
+    mode: 'hash',
     routes: [...routes],
     scrollBehavior() {
         return {
